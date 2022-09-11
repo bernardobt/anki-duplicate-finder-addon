@@ -25,6 +25,9 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: 3.8.10
+      - name: Build Zip
+        run: |
+          python zipfiles.py
       - name: Check Tag Type
         id: tagtype
         run: |
@@ -38,7 +41,7 @@ jobs:
         if: steps.tagtype.outputs.type == 'pre'
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "src/*"
+          artifacts: "duplicate-finder-addon.zip"
           generateReleaseNotes: true
           token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: true
@@ -46,6 +49,7 @@ jobs:
         if: steps.tagtype.outputs.type == 'release'
         uses: ncipollo/release-action@v1
         with:
+          artifacts: "duplicate-finder-addon.zip"
           generateReleaseNotes: true
           token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: false
