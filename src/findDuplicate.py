@@ -22,7 +22,7 @@ def getHighlightedText():
         if "\n" in selection:
             showInfo("Can't look text with new line characters")
             return
-        # In case nothign is highlighted, it will set the content to search based on config parameter
+        # In case nothing is highlighted, it will set the content to search based on config parameter
         if not selection:
             note = getNoteInfoById(mw.reviewer.card.nid)
             return note[fieldIfNoHighlight]
@@ -52,7 +52,7 @@ def findDuplicate():
             comparedNotesCount +=1
             if note[field] == highlightedText:
                 note.add_tag(customTag)
-                ## Flush andReset are needed to actually save the changes in the note's TAG property
+                ## Flush and Reset are needed to actually save the changes in the note's TAG property
                 note.flush()
                 mw.reset()
 

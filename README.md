@@ -30,16 +30,18 @@ This addon was made and tested on this version of Anki:
 
 - Download the zip file in the newest version from the [Release Page](https://github.com/bernardobt/anki-duplicate-finder-addon/releases)
 
-- <img alt="Release">
+      <img src="docs/Download.png" alt="Release">
 
 - Open the Addons menu:
 
   - Use the Ctrl + Shift + A Shortcut
-  - In Anki's menu, go to Tools -> Add-ons
+  - Or, in Anki's menu, go to Tools -> Add-ons
+
     <img src="docs\AddonMenuFromToolbar.png" alt="Addon menu from toolbar">
 
 - In the Add-ons menu, click on "View Files" to open Anki's Add-on folder:
-  <img src="docs\ViewFiles.png" alt="Addon menu from toolbar">
+
+    <img src="docs\ViewFiles.png" alt="Addon menu from toolbar">
 
 - Extract the downloaded zip file into Anki's Add-on folder
   <img src="docs\Installed.png" alt="Addon Menu">
